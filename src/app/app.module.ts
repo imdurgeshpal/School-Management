@@ -7,13 +7,19 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TearchersComponent } from './components/tearchers/tearchers.component';
+import { StudentsComponent } from './components/students/students.component';
+import { ParentsComponent } from './components/parents/parents.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    TearchersComponent,
+    StudentsComponent,
+    ParentsComponent
   ],
   imports: [
     CommonModule,
