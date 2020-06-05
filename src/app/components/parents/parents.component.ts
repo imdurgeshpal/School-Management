@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Teacher } from 'src/app/models';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'parents',

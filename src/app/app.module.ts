@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { TearchersComponent } from './components/tearchers/tearchers.component';
 import { StudentsComponent } from './components/students/students.component';
 import { ParentsComponent } from './components/parents/parents.component';
+import { CoreModule } from './core/core.module';
+import { AgGridModule } from 'ag-grid-angular';
+import { LoginComponent } from './layout/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,16 @@ import { ParentsComponent } from './components/parents/parents.component';
     DashboardComponent,
     TearchersComponent,
     StudentsComponent,
-    ParentsComponent
+    ParentsComponent,
+    LoginComponent
   ],
   imports: [
+    CoreModule,
     CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgGridModule.withComponents([])
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
