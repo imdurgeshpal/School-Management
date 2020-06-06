@@ -13,6 +13,7 @@ import { ParentsComponent } from './components/parents/parents.component';
 import { CoreModule } from './core/core.module';
 import { AgGridModule } from 'ag-grid-angular';
 import { LoginComponent } from './layout/login/login.component';
+import { ContainerComponent } from './layout/container/container.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './layout/login/login.component';
     TearchersComponent,
     StudentsComponent,
     ParentsComponent,
-    LoginComponent
+    LoginComponent,
+    ContainerComponent
   ],
   imports: [
     CoreModule,
