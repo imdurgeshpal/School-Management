@@ -1,0 +1,84 @@
+<div class="container mt-4" [formGroup]="studentForm">
+    <!-- Text input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="lastName">Last Name</label>
+        <div class="col-md-5">
+            <input id="lastName" formControlName="lastName" type="text" placeholder="Your last name"
+                class="form-control input-md">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="firstName">First Name</label>
+        <div class="col-md-5">
+            <input id="firstName" formControlName="firstName" type="text" placeholder="Your first name"
+                class="form-control input-md">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="email">Email</label>
+        <div class="col-md-5">
+            <input id="email" name="email" type="text" placeholder="Your email here" class="form-control input-md"
+                required="">
+            <span class="help-block">xxxxxxxxx@xxxxx.xxx</span>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="username">Username</label>
+        <div class="col-md-5">
+            <input id="username" formControlName="username" type="text" placeholder="Your username"
+                class="form-control input-md">
+
+        </div>
+    </div>
+
+    <!-- Password input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="password">Password </label>
+        <div class="col-md-5">
+            <input id="password" formControlName="password" type="password" placeholder="Password"
+                class="form-control input-md" required="">
+
+        </div>
+    </div>
+
+    <!-- Password input-->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="confirmasipassword">Konfirmasi Password</label>
+        <div class="col-md-5">
+            <input id="confirmasipassword" name="confirmasipassword" type="password" placeholder="Confirmation password"
+                class="form-control input-md" required="">
+            <span class="help-block">Type again your password</span>
+        </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="gender">Gender</label>
+        <div class="col-md-4">
+            <label class="radio-inline" for="gender-0">
+                <input type="radio" formControlName="gender" value="male" checked="checked">
+                Male
+            </label>
+            <label class="radio-inline" for="gender-1">
+                <input type="radio" formControlName="gender" value="female">
+                Female
+            </label>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group row">
+        <label class="col-md-4 control-label" for="confirmation"></label>
+        <div class="col-md-4">
+            <button id="confirmation" name="confirmation" class="btn btn-primary" (click)="addNewUser()">Submit</button>
+        </div>
+    </div>
+</div>

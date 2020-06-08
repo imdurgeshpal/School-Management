@@ -7,6 +7,8 @@ import { ParentsComponent } from './components/parents/parents.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { LoginComponent } from './layout/login/login.component';
 import { ContainerComponent } from './layout/container/container.component';
+import { AddEditStudentComponent } from './components/students/add-edit-student/add-edit-student.component';
+import { AddEditTeacherComponent } from './components/tearchers/add-edit-teacher/add-edit-teacher.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
             { path: '', component: DashboardComponent },
             { path: 'teachers', component: TearchersComponent },
             { path: 'students', component: StudentsComponent },
-            { path: 'parents', component: ParentsComponent }
+            { path: 'parents', component: ParentsComponent },
+            { path: 'add-edit-student', component: AddEditStudentComponent },
+            { path: 'add-edit-teacher', component: AddEditTeacherComponent }
         ]
     },
     { path: 'login', component: LoginComponent }

@@ -30,7 +30,7 @@ public class StudentController {
 		return service.getAllUsers();
 	}
 
-	@PostMapping("/createUser")
+	@PostMapping("/createNewStudent")
 	public ResponseEntity<Student> createUser(@RequestBody Student user) {
 
 		Student _user = service.createUser(user);

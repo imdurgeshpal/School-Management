@@ -12,10 +12,14 @@ import com.school.management.repository.TeacherRepository;
 public class TeacherService {
 
 	@Autowired
-	TeacherRepository repository;
+	TeacherRepository teacherRepository;
 
 	public List<Teacher> getAllTeachers() {
-		return repository.findAll();
+		return teacherRepository.findAll();
+	}
+
+	public Teacher createNewTeacher(Teacher teacher) {
+		return teacherRepository.save(teacher);
 	}
 
 }

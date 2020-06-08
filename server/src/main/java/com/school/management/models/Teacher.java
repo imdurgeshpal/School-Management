@@ -1,11 +1,15 @@
 package com.school.management.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "sms_teachers")
 public class Teacher extends UserVo {
+	
 	
 	private String employeeId;
 
@@ -16,4 +20,5 @@ public class Teacher extends UserVo {
 	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
+
 }

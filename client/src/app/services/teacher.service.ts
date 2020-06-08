@@ -13,4 +13,8 @@ export class TeacherService {
   getAllTeachers(): Observable<Teacher[]> {
     return this.httpClient.get<Teacher[]>('teacher/getAllTeachers');
   }
+
+  createNewTeacher(newTeacher: Teacher) {
+    return this.httpClient.post('teacher/createNewTeacher', newTeacher);
+  }
 }

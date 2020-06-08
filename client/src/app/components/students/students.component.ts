@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from 'src/app/services';
 import { Student } from 'src/app/models';
 import { ColDef } from 'ag-grid-community';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'students',
@@ -13,7 +14,7 @@ export class StudentsComponent implements OnInit {
   students: Student[];
   columnDefs: ColDef[];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -30,7 +31,22 @@ export class StudentsComponent implements OnInit {
       { headerName: 'Sr.No', },
 
       { headerName: 'Name', field: 'firstName' },
-      { headerName: 'Gender', field: 'gender' }
+      { headerName: 'Gender', field: 'gender' },
+      {
+        headerName: 'Edit',
+        cellRenderer: (params) => {
+          return '<button class="btn btn-primary btn-sm">Edit</button>';
+        },
+        onCellClicked: this.editStudent
+      }
     ];
+  }
+
+  editStudent(node) {
+    console.log(node);
+  }
+
+  createNewStudent() {
+    this.router.navigateByUrl('container/add-edit-student');
   }
 }
