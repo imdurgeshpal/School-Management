@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services';
+import { User } from 'src/app/models';
 
 @Component({
   selector: 'sms-side-bar',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+
+    this.user = this.auth.user;
   }
 
 }

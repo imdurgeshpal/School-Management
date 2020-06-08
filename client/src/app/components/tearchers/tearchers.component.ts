@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Teacher } from 'src/app/models';
 import { ColDef } from 'ag-grid-community';
+import { TeacherService } from 'src/app/services/teacher.service';
 
 @Component({
   selector: 'tearchers',
@@ -9,12 +10,16 @@ import { ColDef } from 'ag-grid-community';
 })
 export class TearchersComponent implements OnInit {
 
-  teachers: Teacher[] = [];
+  teachers: Teacher[];
   columnDefs: ColDef[];
-  constructor() { }
+  constructor(private teacherService: TeacherService) { }
 
   ngOnInit(): void {
     this.columnDefs = this.getColumnDef();
+
+    this.teacherService.getAllTeachers().subscribe(res => {
+      this.teachers = res;
+    });
   }
 
   getColumnDef(): ColDef[] {

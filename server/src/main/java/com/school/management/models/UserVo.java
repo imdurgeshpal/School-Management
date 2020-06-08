@@ -38,6 +38,8 @@ public class UserVo {
 
 	@Column(name = "dob")
 	private Date dob;
+	
+	private Integer phone;
 
 	/**
 	 * @return the id
@@ -135,6 +137,14 @@ public class UserVo {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Integer getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Integer phone) {
+		this.phone = phone;
 	}
 
 }
